@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { LanguageContext } from '../contexts/LanguageContext';
+import { LanguageContext } from '../contexts/LanguageContext'
 
 const Navbar = () => {
     const { isEnglish, english, spanish, toggleLanguage } = useContext(LanguageContext);
@@ -7,11 +7,11 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <nav>
-                <ul>
-                    <li>{ language.home }</li>
-                    <li>{ language.about }</li>
-                    <li>{ language.contact }</li>
-                    <button onClick={toggleLanguage}>{ isEnglish ? 'Haz click para Español' : 'Click to view in English' }</button>
+                <ul className="content">
+                    <li><a href="#">{ language.nav1 }</a></li>
+                    <li><a href="#">{ language.nav2 }</a></li>
+                    <li><a href="#">{ language.nav3 }</a></li>
+                    <li className="four"><a onClick={toggleLanguage}>{ isEnglish ? 'ES' : 'EN' }</a></li>
                 </ul>
             </nav>
         </div>

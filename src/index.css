@@ -5,40 +5,107 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: red;
+  background-image: url(./img/taco.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* nav */
+.navbar nav .content{
+  background: rgba(255, 255, 255, .6);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-gap: 50px;
+  text-align: center;
+  margin: 10px 0px 25px 25px;
+  padding: 0;
+}
 .navbar nav ul li{
   list-style-type: none;
-  background: white;
-  display: inline;
   padding: 10px;
-  border-radius: 20px;
-  margin: 0 5px;
-  font-size: 15px;
+  font-size: 60px;
+  border-radius: 7px;
+}
+.navbar nav ul li a{
+  color: red;
+  text-decoration: none;
 }
 .navbar nav ul li:hover{
   cursor: pointer;
-  background: blue;
-  color: white;
   font-weight: bold;
 }
-.navbar nav ul{
+.navbar nav ul li .four{
+  background: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 10px;
+}
+
+/* form title */
+.form-title{
+  font-size: 500%;
+  width: 45%;
+  position: absolute;
+  left: 50%;
+  margin-left: -22.5%;
+  margin-top: 15%;
+  color: red;
+  background: rgba(255, 255, 255, .7);
+  display: inline-block;
+}
+
+/* form */
+form{
+  display: flex;
+  flex-wrap: wrap;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 35%;
+}
+form .one{
+  flex-grow: 1;
+  min-width: 100%;
+  padding: 10px 10px;
+  border: 0;
+  margin-bottom: 1%;
+  background: rgba(255, 255, 255, .7);
+  color: red;
+  font-weight: bold;
   text-align: center;
 }
-.navbar nav ul button{
-  background: white;
-  border-width: 0px;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 15px;
-  cursor: pointer;
+form .one::placeholder{
+  color: red;
 }
-.navbar nav ul button:hover{
-  background: blue;
-  color: white;
+form .two{
+  flex-grow: 1;
+  min-width: 100%;
+  padding: 10px 10px;
+  border: 0;
+  margin-top: 1%;
+  background: rgba(255, 255, 255, .7);
+  color: red;
   font-weight: bold;
+  text-align: center;
+}
+form .two::placeholder{
+  color: red;
+}
+form .submit{
+  margin-top: 1%;
+  width: 50%;
+  position: relative;
+  left: 28.5%;
+  padding: 5px;
+  background: rgba(255, 255, 255, .7);
+  border: 2px solid red;
+  color: red;
+  font-weight: bold;
+  text-align: center;
 }
