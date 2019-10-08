@@ -5,7 +5,7 @@ const RecipeForm = (props) => {
     const [ingredient, setIngredient] = useState('');
     const submitHandler = (e) => {
         e.preventDefault();
-        props.searchTacos(recipe, ingredient);
+        props.getTacos(recipe, ingredient);
         setRecipe('');
         setIngredient('');
     }

@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import RecipeForm from './RecipeForm'
 
 const TacoList = () => {
-    const [taco, setTaco] = useState({ taco: '', ingredient: '' });
-    const searchTacos = (recipe, ingredient) => {
-        fetch('../tacos.json').then(data => console.log(data));
+    let [term, setTerm] = useState({ recipe: 'Mexican', ingredient: 'Tomato' });
+    const getTacos = (recipe, ingredient) => {
+        setTerm(term = { recipe: recipe, ingredient: ingredient });
     }
+    useEffect(() => {
+        console.log('the tacolist component rerendered');
+    }, [term])
     return (
         <div className="taco-list">
-            <RecipeForm searchTacos={searchTacos} />
+            <RecipeForm getTacos={getTacos} />
         </div>
     );
 }
