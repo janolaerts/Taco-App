@@ -1,18 +1,51 @@
 import React, { useState } from 'react'
 
 const RecipeForm = (props) => {
-    const [recipe, setRecipe] = useState('');
-    const [ingredient, setIngredient] = useState('');
+    const [baseLayer, setBaseLayer] = useState('');
+    const [condiment, setCondiment] = useState('');
+    const [mixing, setMixing] = useState('');
+    const [seasoning, setSeasoning] = useState('');
+    const [shell, setShell] = useState('');
+
+    let tacos = props.tacos;
+    console.log(tacos.condiments);
+    
     const submitHandler = (e) => {
         e.preventDefault();
-        props.getTacos(recipe, ingredient);
-        setRecipe('');
-        setIngredient('');
+        props.saveCombination(baseLayer, condiment, mixing, seasoning, shell);
+        setBaseLayer('');
+        setCondiment('');
+        setMixing('');
+        setSeasoning('');
+        setShell('');
     }
     return (
         <form onSubmit={submitHandler} >
-            <input value={recipe} className="one" type="text" placeholder="Which recipe are you looking for?" onChange={(e) => setRecipe(e.target.value)} required />
-            <input value={ingredient} className="two" type="text" placeholder="Which ingredient must be present on the taco?" onChange={(e) => setIngredient(e.target.value)} required />
+            <select className="base-layer" name="baseLayer" value={baseLayer} onChange={(e) => setBaseLayer(e.target.value)} required >
+                <option>SELECT BASE LAYER</option>
+                <option>Mexican</option>
+                <option>Asian</option>
+            </select>
+            <select className="condiment" name="condiment" value={condiment} onChange={(e) => setCondiment(e.target.value)} required >
+                <option>SELECT CONDIMENT</option>
+                <option>Tomato</option>
+                <option>Lettuce</option>
+            </select>
+            <select className="mixing" name="mixing" value={mixing} onChange={(e) => setMixing(e.target.value)} required >
+                <option>SELECT MIXING</option>
+                <option>Tomato</option>
+                <option>Lettuce</option>
+            </select>
+            <select className="seasoning" name="seasoning" value={seasoning} onChange={(e) => setSeasoning(e.target.value)} required >
+                <option>SELECT SEASONING</option>
+                <option>Tomato</option>
+                <option>Lettuce</option>
+            </select>
+            <select className="shell" name="shell" value={shell} onChange={(e) => setShell(e.target.value)} required >
+                <option>SELECT SHELL</option>
+                <option>Tomato</option>
+                <option>Lettuce</option>
+            </select>
             <input type="submit" className="submit" />
         </form>
     );
