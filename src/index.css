@@ -48,26 +48,12 @@ code {
   grid-gap: 10px;
 }
 
-/* form title */
-.form-title{
-  font-size: 500%;
-  width: 45%;
-  position: absolute;
-  left: 50%;
-  margin-left: -22.5%;
-  margin-top: 15%;
-  color: red;
-  background: rgba(255, 255, 255, .7);
-  display: inline-block;
-}
-
 /* form */
 form{
   display: flex;
   flex-wrap: wrap;
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 25%;
 }
 form select{
   flex-grow: 1;
@@ -95,4 +81,37 @@ form .submit{
   color: red;
   font-weight: bold;
   text-align: center;
+}
+
+/* base layers */
+.base-layers{
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow-x: auto;
+  height: 7%;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+.base-layer{
+  margin: 10px 10px 10px 10px;
+  background: red;
+  display: inline-block;
+  min-width: 20%;
+  min-height: 7%;
+  border-radius: 10px;
+}
+.base-layer .base-layer-title{
+  text-align: center;
+}
+.base-layer img{
+  width: 100%;
+}
+.base-layer .base-layer-ingredients{
+  text-align: justify;
+  margin: 0px 10px;
+}
+.base-layer .base-layer-tags{
+  margin: 15px 5px 2px 10px;
 }

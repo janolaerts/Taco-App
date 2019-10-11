@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react'
-import RecipeForm from './RecipeForm'
+import React, { useState } from 'react'
+import OrderForm from './OrderForm'
 
 const TacoList = () => {
-    //let [tacos, setTacos] = useState();
     let [combination, setCombination] = useState('');
     const saveCombination = (baseLayer, condiment, mixing, seasoning, shell) => {
         setCombination(combination = { baseLayer: baseLayer, condiment: condiment, mixing: mixing, seasoning: seasoning, shell: shell });
+        findRecipe();
+    }
+    const findRecipe = () => {
         console.log(combination);
     }
     return (
         <div className="taco-list">
-            <RecipeForm saveCombination={saveCombination} />
+            <OrderForm saveCombination={saveCombination} combination={combination} />
         </div>
     );
 }

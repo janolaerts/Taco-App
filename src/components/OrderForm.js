@@ -24,6 +24,7 @@ const RecipeForm = (props) => {
                 .then(response => response.json()) 
                 .then(data => {
                     setTacos(data);
+                    console.log(data);
                 })
         }
         fetchData();
@@ -31,12 +32,18 @@ const RecipeForm = (props) => {
     }, [])
     return (
         <form onSubmit={submitHandler} >
-            <select className="base-layer" name="baseLayer" value={baseLayer} onChange={(e) => setBaseLayer(e.target.value)} required >
-                <option>SELECT BASE LAYER</option>
+            <div className='base-layers'>
                 { Array.isArray(tacos.base_layers) && tacos.base_layers.map(item => {
-                    return <option key={uuid()}>{ item.title }</option>
+                    return  <div className="base-layer" key={uuid()} onClick={(e) => setBaseLayer(e.target.value)}>
+                                <h4 className="base-layer-title">{ item.title }</h4>
+                                <img src={require('../img/taco-cards.jpg')} alt="taco" />
+                                { Array.isArray(tacos.base_layers) && tacos.base_layers.forEach(item => item.ingredients.map(item => {
+                                    return <h6 className="base-layer-ingredients" key={uuid()}>{ item }</h6>
+                                })) }
+                                <h6 className="base-layer-tags">{ item.tags }</h6>
+                            </div>
                 }) }
-            </select>
+            </div>
             <select className="condiment" name="condiment" value={condiment} onChange={(e) => setCondiment(e.target.value)} required >
                 <option>SELECT CONDIMENT</option>
                 { Array.isArray(tacos.condiments) && tacos.condiments.map(item => {
