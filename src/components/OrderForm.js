@@ -44,14 +44,22 @@ const RecipeForm = (props) => {
                     return  <div className="base-layer" key={uuid()} onClick={(e) => setBaseLayer(e.target.value)}>
                                 <h4 className="base-layer-title">{ item.title }</h4>
                                 <img src={require('../img/taco-cards.jpg')} alt="taco" />
+                                <div className="base-layer-ingredients-container">
                                 { item.ingredients.map(item => {
                                     if(typeof item === 'string'){
                                         return   <h6 className="base-layer-ingredients" key={uuid()}>{ item }</h6>
                                     }
+                                    if(typeof item === 'object'){
+                                        return  <h6 className="base-layer-ingredients" key={uuid()}>{ item.title }</h6>
+                                        return  <h6 className="base-layer-ingredients" key={uuid()}>{ item.ingredients }</h6>
+                                    }
                                 }) }
+                                </div>
+                                <div className="base-layer-tags-container">
                                 { item.tags.map(item => {
                                    return   <h6 className="base-layer-tags" key={uuid()}>{ item }</h6>
                                 }) }
+                                </div>
                             </div>
                 }) }
             </div>

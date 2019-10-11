@@ -93,14 +93,15 @@ form .submit{
   width: 90%;
   margin: 0 auto;
   display: flex;
+  position: relative;
 }
 .base-layer{
-  margin: 10px 10px 10px 10px;
+  margin: 0px 10px;
   background: red;
   display: inline-block;
-  min-width: 20%;
-  min-height: 7%;
+  min-width: 30%;
   border-radius: 10px;
+  overflow: hidden;
 }
 .base-layer .base-layer-title{
   text-align: center;
@@ -108,14 +109,22 @@ form .submit{
 .base-layer img{
   width: 100%;
 }
+.base-layer .base-layer-ingredients-container{
+  overflow-y: scroll;
+}
 .base-layer .base-layer-ingredients{
   text-align: justify;
-  margin: 0px 10px;
+  margin: 0px 10px; 
+}
+.base-layer .base-layer-tags-container{
+  position: absolute;
+  bottom: -2%;
+  margin-left: 21%;
 }
 .base-layer .base-layer-tags{
-  margin: 15px 10px 8px 1px;
-  float: right;
+  margin-right: 5%;
   padding: 2px 4px;
   background: gray;
   border-radius: 10px;
+  display: inline-block;
 }
