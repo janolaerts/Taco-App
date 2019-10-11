@@ -5,9 +5,9 @@ const TacoList = () => {
     let [combination, setCombination] = useState('');
     const saveCombination = (baseLayer, condiment, mixing, seasoning, shell) => {
         setCombination(combination = { baseLayer: baseLayer, condiment: condiment, mixing: mixing, seasoning: seasoning, shell: shell });
-        findRecipe();
+        checkout();
     }
-    const findRecipe = () => {
+    const checkout = () => {
         console.log(combination);
     }
     return (

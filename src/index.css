@@ -89,7 +89,6 @@ form .submit{
   font-weight: bold;
   white-space: nowrap;
   overflow-x: auto;
-  height: 7%;
   width: 90%;
   margin: 0 auto;
   display: flex;
@@ -102,6 +101,7 @@ form .submit{
   min-width: 30%;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
 .base-layer .base-layer-title{
   text-align: center;
@@ -111,15 +111,26 @@ form .submit{
 }
 .base-layer .base-layer-ingredients-container{
   overflow-y: scroll;
+  max-height: 15%;
 }
 .base-layer .base-layer-ingredients{
   text-align: justify;
   margin: 0px 10px; 
 }
+.base-layer .base-layer-button{
+  padding: 8px 5px;
+  border: none;
+  position: absolute;
+  bottom: 8%;
+  width: 50%;
+  left: 25%;
+  background: white;
+  font-weight: bold;
+}
 .base-layer .base-layer-tags-container{
   position: absolute;
   bottom: -2%;
-  margin-left: 21%;
+  margin-left: 70%;
 }
 .base-layer .base-layer-tags{
   margin-right: 5%;
