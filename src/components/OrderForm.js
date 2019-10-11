@@ -9,6 +9,11 @@ const RecipeForm = (props) => {
     const [shell, setShell] = useState('');
     let [tacos, setTacos] = useState('');
 
+    Array.isArray(tacos.base_layer) && tacos.base_layer.forEach(baseLayer => {
+        let baseLayerIngredientsArrays = baseLayer.ingredients;
+        console.log(baseLayerIngredientsArrays);
+    })
+
     const submitHandler = (e) => {
         e.preventDefault();
         props.saveCombination(baseLayer, condiment, mixing, seasoning, shell);
@@ -24,7 +29,9 @@ const RecipeForm = (props) => {
                 .then(response => response.json()) 
                 .then(data => {
                     setTacos(data);
-                    console.log(data);
+                    data.base_layers.forEach(item => {
+                        console.log(item.ingredients);
+                    })
                 })
         }
         fetchData();
@@ -37,10 +44,14 @@ const RecipeForm = (props) => {
                     return  <div className="base-layer" key={uuid()} onClick={(e) => setBaseLayer(e.target.value)}>
                                 <h4 className="base-layer-title">{ item.title }</h4>
                                 <img src={require('../img/taco-cards.jpg')} alt="taco" />
-                                { Array.isArray(tacos.base_layers) && tacos.base_layers.forEach(item => item.ingredients.map(item => {
-                                    return <h6 className="base-layer-ingredients" key={uuid()}>{ item }</h6>
-                                })) }
-                                <h6 className="base-layer-tags">{ item.tags }</h6>
+                                { item.ingredients.map(item => {
+                                    if(typeof item === 'string'){
+                                        return   <h6 className="base-layer-ingredients" key={uuid()}>{ item }</h6>
+                                    }
+                                }) }
+                                { item.tags.map(item => {
+                                   return   <h6 className="base-layer-tags" key={uuid()}>{ item }</h6>
+                                }) }
                             </div>
                 }) }
             </div>
