@@ -93,13 +93,7 @@ form .submit{
   margin: 0% auto;
   display: flex;
   margin-top: -7%;
-}
-.base-layers::-webkit-scrollbar{
-  width: 10px;
-}
-.base-layers::-webkit-scrollbar-track{
-  background: #555999;
-  border-radius: 10px;
+  text-align: center;
 }
 .base-layers .base-layer{
   margin: 0px 10px;
@@ -112,16 +106,6 @@ form .submit{
   height: 85%;
   bottom: -14%;
 }
-.base-layer::-webkit-scrollbar{
-  width: 10px;
-}
-.base-layer::-webkit-scrollbar-track{
-  background: #555999;
-  border-radius: 10px;
-}
-.base-layer .base-layer-title{
-  text-align: center;
-}
 .base-layer img{
   width: 100%;
 }
@@ -131,7 +115,7 @@ form .submit{
 }
 .base-layer .base-layer-ingredients{
   text-align: justify;
-  margin: 0px 10px; 
+  margin: 0px 10px;
 }
 .base-layer .base-layer-button{
   padding: 7px 5px;
@@ -154,4 +138,26 @@ form .submit{
   background: gray;
   border-radius: 10px;
   display: inline-block;
+}
+.base-layers::-webkit-scrollbar{
+  width: 10px;
+}
+.base-layers::-webkit-scrollbar-track{
+  background: white;
+  border-radius: 10px;
+}
+.base-layers::-webkit-scrollbar-thumb{
+  background: red;
+  border-radius: 10px;
+}
+.base-layer-ingredients-container::-webkit-scrollbar{
+  width: 5px;
+}
+.base-layer-ingredients-container::-webkit-scrollbar-track{
+  background: grey;
+  border-radius: 5px;
+}
+.base-layer-ingredients-container::-webkit-scrollbar-thumb{
+  background: white;
+  border-radius: 10px;
 }
