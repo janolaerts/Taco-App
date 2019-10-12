@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import uuid from 'uuid/v1'
 import BaseLayers from './BaseLayers';
+import Condiments from './Condiments';
 
 const RecipeForm = (props) => {
     const [baseLayer, setBaseLayer] = useState('');
@@ -38,12 +39,7 @@ const RecipeForm = (props) => {
     return (
         <form onSubmit={submitHandler} >
             <BaseLayers tacos={tacos} setBaseLayer={setBaseLayer} />
-            <select className="condiment" name="condiment" value={condiment} onChange={(e) => setCondiment(e.target.value)} required >
-                <option>SELECT CONDIMENT</option>
-                { Array.isArray(tacos.condiments) && tacos.condiments.map(item => {
-                    return <option key={uuid()}>{ item.title }</option>
-                }) }
-            </select>
+            <Condiments tacos={tacos} setCondiment={setCondiment} />
             <select className="mixing" name="mixing" value={mixing} onChange={(e) => setMixing(e.target.value)} required >
                 <option>SELECT MIXING</option>
                 { Array.isArray(tacos.mixins) && tacos.mixins.map(item => {

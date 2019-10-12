@@ -95,7 +95,7 @@ form .submit{
   margin-top: -7%;
   text-align: center;
 }
-.base-layers .base-layer{
+.base-layer{
   margin: 0px 10px;
   background: red;
   display: inline-block;
@@ -140,7 +140,7 @@ form .submit{
   display: inline-block;
 }
 .base-layers::-webkit-scrollbar{
-  width: 10px;
+  width: 7px;
 }
 .base-layers::-webkit-scrollbar-track{
   background: white;
@@ -155,9 +155,23 @@ form .submit{
 }
 .base-layer-ingredients-container::-webkit-scrollbar-track{
   background: grey;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .base-layer-ingredients-container::-webkit-scrollbar-thumb{
   background: white;
   border-radius: 10px;
+}
+
+/* condiments */
+.condiments{
+  margin: 0 auto;
+}
+.condiment button{
+  padding: 10px 2px;
+  background: red;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin: 10px 5px;
+  float: left;
 }
