@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import uuid from 'uuid/v1'
 import BaseLayers from './BaseLayers';
 import Condiments from './Condiments';
 import Mixings from './Mixings';
@@ -16,7 +15,6 @@ const RecipeForm = (props) => {
 
     Array.isArray(tacos.base_layer) && tacos.base_layer.forEach(baseLayer => {
         let baseLayerIngredientsArrays = baseLayer.ingredients;
-        console.log(baseLayerIngredientsArrays);
     })
 
     const submitHandler = (e) => {

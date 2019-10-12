@@ -75,12 +75,13 @@ form .submit{
   width: 50%;
   position: relative;
   left: 26%;
-  padding: 5px;
-  background: rgba(255, 255, 255, .7);
-  border: 2px solid red;
-  color: red;
+  padding: 1%;
+  background: red;
+  border: 2px solid white;
+  color: white;
   font-weight: bold;
   text-align: center;
+  cursor: pointer;
 }
 
 /* base layers */
@@ -116,6 +117,9 @@ form .submit{
   height: 85%;
   bottom: -14%;
 }
+.base-layer:hover{
+  transform: scale(1.02);
+}
 .base-layer img{
   width: 100%;
 }
@@ -136,6 +140,7 @@ form .submit{
   left: 25%;
   background: white;
   font-weight: bold;
+  cursor: pointer;
 }
 .base-layer .base-layer-tags-container{
   position: absolute;
@@ -194,6 +199,9 @@ form .submit{
 float: left;
 margin-top: .6%;
 }
+.condiment:hover, .mixing:hover, .seasoning:hover, .shell:hover{
+  transform: scale(1.05);
+}
 .condiment button, .mixing button, .seasoning button, .shell button{
   padding: 10px 2px;
   background: red;
@@ -201,4 +209,8 @@ margin-top: .6%;
   color: white;
   font-weight: bold;
   margin: 10px 5px;
+  cursor: pointer;
 }
+.condiment button:hover, .mixing button:hover, .seasoning button:hover, .shell button:hover{
+  background: darkblue;
+}  
