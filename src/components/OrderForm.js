@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react'
 import uuid from 'uuid/v1'
 import BaseLayers from './BaseLayers';
 import Condiments from './Condiments';
+import Mixings from './Mixings';
+import Seasonings from './Seasonings';
+import Shells from './Shells';
 
 const RecipeForm = (props) => {
     const [baseLayer, setBaseLayer] = useState('');
@@ -40,24 +43,9 @@ const RecipeForm = (props) => {
         <form onSubmit={submitHandler} >
             <BaseLayers tacos={tacos} setBaseLayer={setBaseLayer} />
             <Condiments tacos={tacos} setCondiment={setCondiment} />
-            <select className="mixing" name="mixing" value={mixing} onChange={(e) => setMixing(e.target.value)} required >
-                <option>SELECT MIXING</option>
-                { Array.isArray(tacos.mixins) && tacos.mixins.map(item => {
-                    return <option key={uuid()}>{ item.title }</option>
-                }) }
-            </select>
-            <select className="seasoning" name="seasoning" value={seasoning} onChange={(e) => setSeasoning(e.target.value)} required >
-                <option>SELECT SEASONING</option>
-                { Array.isArray(tacos.seasonings) && tacos.seasonings.map(item => {
-                    return <option key={uuid()}>{ item.title }</option>
-                }) }
-            </select>
-            <select className="shell" name="shell" value={shell} onChange={(e) => setShell(e.target.value)} required >
-                <option>SELECT SHELL</option>
-                { Array.isArray(tacos.shells) && tacos.shells.map(item => {
-                    return <option key={uuid()}>{ item.title }</option>
-                }) }
-            </select>
+            <Mixings tacos={tacos} setMixing={setMixing} />
+            <Seasonings tacos={tacos} setSeasoning={setSeasoning} />
+            <Shells tacos={tacos} setShell={setShell} />
             <input type="submit" className="submit" />
         </form>
     );

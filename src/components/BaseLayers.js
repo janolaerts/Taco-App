@@ -5,6 +5,7 @@ const BaseLayers = (props) => {
     let tacos = props.tacos;
     return (
         <div className='base-layers'>
+        <div className="base-layers-info" >START BY CHOOSING A BASE LAYER</div>
             { Array.isArray(tacos.base_layers) && tacos.base_layers.map(item => {
                 return  <div className="base-layer" key={uuid()} id={item.title} >
                             <h4 className="base-layer-title">{ item.title }</h4>

@@ -92,8 +92,18 @@ form .submit{
   width: 90%;
   margin: 0% auto;
   display: flex;
-  margin-top: -7%;
+  margin-top: -5%;
   text-align: center;
+}
+.base-layers-info{
+  position: absolute;
+  width: 100%;
+  background: rgba(255, 255, 255, .7);
+  color: red;
+  height: 2.5%;
+  text-align: center;
+  left: 0%;
+  margin-top: 4%;
 }
 .base-layer{
   margin: 0px 10px;
@@ -162,16 +172,33 @@ form .submit{
   border-radius: 10px;
 }
 
-/* condiments */
-.condiments{
+/* condiments, mixings, seasonings, shells */
+.condiments, .mixings, .seasonings,.shells{
+  width: 90%;
+  text-align: center;
   margin: 0 auto;
+  margin-top: 1%;
 }
-.condiment button{
+.condiments-info, .mixings-info, .seasonings-info, .shells-info{
+  position: absolute;
+  width: 100%;
+  background: rgba(255, 255, 255, .7);
+  color: red;
+  height: 2.5%;
+  text-align: center;
+  left: 0%;
+  margin-top: -.5%;
+  font-weight: bold;
+}
+.condiment, .mixing, .seasoning, .shell{
+float: left;
+margin-top: .6%;
+}
+.condiment button, .mixing button, .seasoning button, .shell button{
   padding: 10px 2px;
   background: red;
   border: none;
   color: white;
   font-weight: bold;
   margin: 10px 5px;
-  float: left;
 }
