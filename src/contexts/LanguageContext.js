@@ -5,8 +5,8 @@ export const LanguageContext = createContext();
 class LanguageContextProvider extends Component {
     state = {
         isEnglish: true,
-        english: {nav1: 'Order', nav2: 'Checkout', nav3: 'Contact' },
-        spanish: {nav1: 'Pedir', nav2: 'Pagar', nav3: 'Contacto' }
+        english: {nav1: 'Order', nav2: 'About' },
+        spanish: {nav1: 'Pedir', nav2: 'Sobre' }
     }
     toggleLanguage = () => {
         this.setState({ isEnglish: !this.state.isEnglish });

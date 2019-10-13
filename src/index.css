@@ -19,7 +19,7 @@ code {
 .navbar nav .content{
   background: rgba(255, 255, 255, .6);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   align-items: center;
   grid-gap: 50px;
@@ -213,4 +213,40 @@ margin-top: .6%;
 }
 .condiment button:hover, .mixing button:hover, .seasoning button:hover, .shell button:hover{
   background: darkblue;
-}  
+}
+
+/* checkout */
+.checkout-title{
+  background: darkblue;
+  text-align: center;
+  padding: 1% 0%;
+  font-weight: bold;
+  font-size: 350%;
+  color: white;
+}
+.checkout-items{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1%;
+}
+.checkout-item{
+  color: white;
+  font-weight: bold;
+  background: red;
+  width: 17%;
+  height: 15%;
+  border: black solid 2px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.checkout-item-title{
+  text-align: center;
+}
+.checkout-item-image{
+  width: 100%;
+  height: 100%;
+}
+.checkout-item-text{
+  text-align: center;
+  font-size: 100%;
+}
