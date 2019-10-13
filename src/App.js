@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
 import LanguageContextProvider from './contexts/LanguageContext';
-import TacoList from './components/TacoList';
+import OrderForm from './components/OrderForm';
 import Checkout from './components/Checkout';
 import CombinationContextProvider from './contexts/CombinationContext';
 
@@ -13,7 +13,7 @@ function App() {
         <CombinationContextProvider>
         <LanguageContextProvider>
           <Navbar />
-          <Route exact path="/" component={TacoList} />
+          <Route exact path="/" component={OrderForm} />
           <Route path="/checkout" component={Checkout} />
         </LanguageContextProvider>
         </CombinationContextProvider>

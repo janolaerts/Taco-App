@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useContext } from 'react'
+import { CombinationContext } from '../contexts/CombinationContext';
+import { Redirect } from 'react-router-dom'
 import BaseLayers from './BaseLayers';
 import Condiments from './Condiments';
 import Mixings from './Mixings';
 import Seasonings from './Seasonings';
 import Shells from './Shells';
-import { CombinationContext } from '../contexts/CombinationContext';
+
 
 const RecipeForm = (props) => {
+    let { saveCombination } = useContext(CombinationContext);
     const [baseLayer, setBaseLayer] = useState('');
     const [condiment, setCondiment] = useState('');
     const [mixing, setMixing] = useState('');
@@ -16,7 +19,7 @@ const RecipeForm = (props) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        props.saveCombination(baseLayer, condiment, mixing, seasoning, shell);
+        saveCombination(baseLayer, condiment, mixing, seasoning, shell);
         setBaseLayer('');
         setCondiment('');
         setMixing('');
@@ -35,7 +38,10 @@ const RecipeForm = (props) => {
 
     }, [])
     return (
-        <form onSubmit={submitHandler} >
+        <form onSubmit={(e) => {
+            submitHandler(e);
+            props.history.push('/checkout');
+        }} >
             <BaseLayers tacos={tacos} setBaseLayer={setBaseLayer} />
             <Condiments tacos={tacos} setCondiment={setCondiment} />
             <Mixings tacos={tacos} setMixing={setMixing} />
