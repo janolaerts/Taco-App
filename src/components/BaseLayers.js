@@ -3,12 +3,12 @@ import uuid from 'uuid/v1'
 
 const BaseLayers = (props) => {
     let tacos = props.tacos;
-    const [background, setBackground] = useState({ isSelected: false, clickedItem: '' });
+    const [background, setBackground] = useState({ clickedItem: '' });
     return (
         <div className='base-layers'>
         <div className="base-layers-info" >START BY CHOOSING A BASE LAYER</div>
             { Array.isArray(tacos.base_layers) && tacos.base_layers.map(item => {
-                return  <div className="base-layer" key={uuid()} id={item.title} style={{ backgroundColor: (background.isSelected && background.clickedItem == item.title) ? 'blue' : 'red' }} >
+                return  <div className="base-layer" key={uuid()} id={item.title} style={{ backgroundColor: (background.clickedItem === item.title) ? 'darkblue' : 'red' }} >
                             <h4 className="base-layer-title">{ item.title }</h4>
                             <img src={require('../img/taco-cards.jpg')} alt="taco" />
                             <div className="base-layer-ingredients-container">
@@ -24,7 +24,7 @@ const BaseLayers = (props) => {
                             </div>
                             <button className="base-layer-button" onClick={(e) => {
                                 props.setBaseLayer(e.target.parentElement.id);
-                                setBackground({ isSelected: !background.isSelected, clickedItem: e.target.parentElement.id });
+                                setBackground({ clickedItem: e.target.parentElement.id });
                             }} >
                                 Choose this base layer
                             </button>

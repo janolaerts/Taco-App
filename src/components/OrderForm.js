@@ -13,10 +13,6 @@ const RecipeForm = (props) => {
     const [shell, setShell] = useState('');
     let [tacos, setTacos] = useState('');
 
-    Array.isArray(tacos.base_layer) && tacos.base_layer.forEach(baseLayer => {
-        let baseLayerIngredientsArrays = baseLayer.ingredients;
-    })
-
     const submitHandler = (e) => {
         e.preventDefault();
         props.saveCombination(baseLayer, condiment, mixing, seasoning, shell);

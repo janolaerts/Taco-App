@@ -8,8 +8,8 @@ const Navbar = () => {
         <div className="navbar">
             <nav>
                 <ul className="content">
-                    <li><a href="#">{ language.nav1 }</a></li>
-                    <li><a href="#">{ language.nav2 }</a></li>
+                    <li><a href="/">{ language.nav1 }</a></li>
+                    <li><a href="/checkout">{ language.nav2 }</a></li>
                     <li><a href="#">{ language.nav3 }</a></li>
                     <li className="four"><a onClick={toggleLanguage}>{ isEnglish ? 'ES' : 'EN' }</a></li>
                 </ul>
