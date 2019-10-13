@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import BaseLayers from './BaseLayers';
 import Condiments from './Condiments';
 import Mixings from './Mixings';
 import Seasonings from './Seasonings';
 import Shells from './Shells';
+import { CombinationContext } from '../contexts/CombinationContext';
 
 const RecipeForm = (props) => {
     const [baseLayer, setBaseLayer] = useState('');

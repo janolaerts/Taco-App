@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{ useContext } from 'react'
+import { CombinationContext } from '../contexts/CombinationContext';
 
 const Checkout = (props) => {
-    let combination = props.combination;
+    let { combination } = useContext(CombinationContext);
     return (
         <div style={{color: 'white', fontWeight: 'bold'}}>You have chosen the following combination for your taco: 
             <div>Base Layer: { combination.baseLayer }</div>
