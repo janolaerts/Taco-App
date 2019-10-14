@@ -8,10 +8,10 @@ const Navbar = () => {
     return (
         <div className="navbar" >
             <nav style={{visibility: showNav ? 'visible' : 'hidden' }}>
-                    <img className="close" src={require("../img/tacomenu.png")} onClick={toggleNav}/>
+                <img className="menu" src={require("../img/tacomenu.png")} onClick={toggleNav}/>
                 <ul>
                     <li><a href="/">Order</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li><a href="/favorites">Favorites</a></li>
                     <li className="vegetarian"><a onClick={toggleVegetarian}>Are you vegetarian?</a></li>
                 </ul>
             </nav>

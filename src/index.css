@@ -81,16 +81,18 @@ form select option{
 }
 form .submit{
   margin-top: 1%;
-  width: 50%;
+  width: 25%;
   position: relative;
-  left: 26%;
+  left: 38.5%;
   padding: 1%;
-  background: red;
-  border: 2px solid white;
+  background: #0892d0;
   color: white;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
+  border-radius: 50px;
+  border: none;
+  margin-bottom: 1%;
 }
 
 /* base layers */
@@ -165,6 +167,7 @@ form .submit{
 }
 .base-layers::-webkit-scrollbar{
   width: 7px;
+  height: 7px;
 }
 .base-layers::-webkit-scrollbar-track{
   background: white;
@@ -176,6 +179,7 @@ form .submit{
 }
 .base-layer-ingredients-container::-webkit-scrollbar{
   width: 5px;
+  height: 5px;
 }
 .base-layer-ingredients-container::-webkit-scrollbar-track{
   background: grey;
@@ -184,15 +188,6 @@ form .submit{
 .base-layer-ingredients-container::-webkit-scrollbar-thumb{
   background: white;
   border-radius: 10px;
-}
-.base-layers .menu{
-  position: fixed;
-  top: 2%;
-  right: 2%;
-  cursor: pointer;
-  font-weight: bold;
-  width: 40px;
-  height: 40px;
 }
 
 /* condiments, mixings, seasonings, shells */
@@ -235,6 +230,7 @@ margin-top: .6%;
 
 /* checkout */
 .checkout-title{
+  margin-top: 1%;
   background: #0892d0;
   text-align: center;
   padding: 1% 0%;
@@ -268,4 +264,33 @@ margin-top: .6%;
 .checkout-item-text{
   text-align: center;
   font-size: 100%;
+}
+.checkout-edit-order{
+  position: relative;
+  width: 25%;
+  margin: 10% auto;
+  padding: 1% 0%;
+  border: none;
+  background: #0892d0;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 140%;
+}
+.checkout-edit-order-img{
+  float: left;
+  margin-left: 2%;
+}
+
+/* menu */
+.menu{
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  z-index: 1000;
 }

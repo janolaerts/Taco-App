@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react'
+import React, { useState, createContext, useEffect } from 'react'
 
 export const CombinationContext = createContext();
 
@@ -12,8 +12,12 @@ const CombinationContextProvider = (props) => {
     });
     const saveCombination = (baseLayer, condiment, mixing, seasoning, shell) => {
         setCombination(combination = { baseLayer: baseLayer, condiment: condiment, mixing: mixing, seasoning: seasoning, shell: shell });
-        console.log(combination);
     }
+    let combinationsArray = [];
+    useEffect(() => {
+        combinationsArray.push(combination);
+        localStorage.setItem('combinations', JSON.stringify([...combinationsArray, combination]));
+    }, [combination]);
     return (
         <CombinationContext.Provider value={{combination, saveCombination}}>
             { props.children }
