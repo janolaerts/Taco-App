@@ -1,4 +1,4 @@
-import React,{ useContext, useEffect } from 'react'
+import React,{ useContext } from 'react'
 import { CombinationContext } from '../contexts/CombinationContext';
 import { NavContext } from '../contexts/NavContext';
 

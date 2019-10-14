@@ -12,11 +12,12 @@ const CombinationContextProvider = (props) => {
     });
     const saveCombination = (baseLayer, condiment, mixing, seasoning, shell) => {
         setCombination(combination = { baseLayer: baseLayer, condiment: condiment, mixing: mixing, seasoning: seasoning, shell: shell });
+        console.log(combination);
     }
-    let combinationsArray = [];
+    let combinationsArray = JSON.parse(localStorage.getItem('combinationsArray')) || [];
+    combinationsArray.push(combination);
     useEffect(() => {
-        combinationsArray.push(combination);
-        localStorage.setItem('combinations', JSON.stringify([...combinationsArray, combination]));
+        localStorage.setItem('combinationsArray', JSON.stringify(combinationsArray));
     }, [combination]);
     return (
         <CombinationContext.Provider value={{combination, saveCombination}}>

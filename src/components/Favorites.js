@@ -3,7 +3,7 @@ import { NavContext } from '../contexts/NavContext';
 
 const Favorites = () => {
     let { toggleNav } = useContext(NavContext);
-    let [favorites, setFavorites] = useState(localStorage.getItem('combinations'));
+    let [favorites, setFavorites] = useState(localStorage.getItem('combinationsArray'));
     console.log(favorites);
     return (
         <div className="favorites" >
