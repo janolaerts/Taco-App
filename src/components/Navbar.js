@@ -1,16 +1,21 @@
-import React, { useContext } from 'react'
-import { LanguageContext } from '../contexts/LanguageContext'
+import React, { useContext, useState } from 'react'
+import { VegetarianContext } from '../contexts/VegetarianContext'
 
 const Navbar = () => {
-    const { isEnglish, english, spanish, toggleLanguage } = useContext(LanguageContext);
-    const language = isEnglish ? english : spanish;
+    const { toggleVegetarian } = useContext(VegetarianContext);
+    let [showNav, setShowNav] = useState(true);
     return (
-        <div className="navbar">
-            <nav>
-                <ul className="content">
-                    <li><a href="/">{ language.nav1 }</a></li>
-                    <li><a href="/about">{ language.nav2 }</a></li>
-                    <li className="four"><a onClick={toggleLanguage}>{ isEnglish ? 'ES' : 'EN' }</a></li>
+        <div className="navbar" >
+            <nav style={{visibility: showNav ? 'visible' : 'hidden' }}>
+                <div className="close" onClick={() => {
+                    setShowNav(!showNav);
+                }}>
+                    <img className="close" src={require("../img/tacomenu.png")} />
+                </div>
+                <ul>
+                    <li><a href="/">Order</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li className="vegetarian"><a onClick={toggleVegetarian}>Are you vegetarian?</a></li>
                 </ul>
             </nav>
         </div>

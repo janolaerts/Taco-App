@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import Navbar from './components/Navbar';
-import LanguageContextProvider from './contexts/LanguageContext';
+import VegetarianContextProvider from './contexts/VegetarianContext';
 import OrderForm from './components/OrderForm';
 import Checkout from './components/Checkout';
 import CombinationContextProvider from './contexts/CombinationContext';
@@ -11,11 +11,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <CombinationContextProvider>
-        <LanguageContextProvider>
+        <VegetarianContextProvider>
           <Navbar />
           <Route exact path="/" component={OrderForm} />
           <Route path="/checkout" component={Checkout} />
-        </LanguageContextProvider>
+        </VegetarianContextProvider>
         </CombinationContextProvider>
       </div>
     </BrowserRouter>

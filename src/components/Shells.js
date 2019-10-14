@@ -12,7 +12,7 @@ const Shells = (props) => {
                             <button onClick={(e) => {
                                 props.setShell(e.target.parentElement.id);
                                 setBackground({ clickedItem: e.target.parentElement.id });
-                            }} style={{backgroundColor: (background.clickedItem === item.title) ? 'darkblue' : 'red' }} >
+                            }} style={{backgroundColor: (background.clickedItem === item.title) ? '#0892d0' : 'red' }} >
                                 { item.title }
                             </button>
                         </div>

@@ -8,7 +8,7 @@ const BaseLayers = (props) => {
         <div className='base-layers'>
         <div className="base-layers-info" >START BY CHOOSING A BASE LAYER</div>
             { Array.isArray(tacos.base_layers) && tacos.base_layers.map(item => {
-                return  <div className="base-layer" key={uuid()} id={item.title} style={{ backgroundColor: (background.clickedItem === item.title) ? 'darkblue' : 'red' }} >
+                return  <div className="base-layer" key={uuid()} id={item.title} style={{ backgroundColor: (background.clickedItem === item.title) ? '#0892d0' : 'red' }} >
                             <h4 className="base-layer-title">{ item.title }</h4>
                             <img src={require('../img/taco-cards.jpg')} alt="taco" />
                             <div className="base-layer-ingredients-container">
