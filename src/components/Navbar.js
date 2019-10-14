@@ -1,17 +1,14 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { VegetarianContext } from '../contexts/VegetarianContext'
+import { NavContext } from '../contexts/NavContext';
 
 const Navbar = () => {
     const { toggleVegetarian } = useContext(VegetarianContext);
-    let [showNav, setShowNav] = useState(true);
+    const { showNav, toggleNav } = useContext(NavContext);
     return (
         <div className="navbar" >
             <nav style={{visibility: showNav ? 'visible' : 'hidden' }}>
-                <div className="close" onClick={() => {
-                    setShowNav(!showNav);
-                }}>
-                    <img className="close" src={require("../img/tacomenu.png")} />
-                </div>
+                    <img className="close" src={require("../img/tacomenu.png")} onClick={toggleNav}/>
                 <ul>
                     <li><a href="/">Order</a></li>
                     <li><a href="/about">About</a></li>

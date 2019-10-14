@@ -5,11 +5,13 @@ import VegetarianContextProvider from './contexts/VegetarianContext';
 import OrderForm from './components/OrderForm';
 import Checkout from './components/Checkout';
 import CombinationContextProvider from './contexts/CombinationContext';
+import NavContextProvider from './contexts/NavContext';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <NavContextProvider>
         <CombinationContextProvider>
         <VegetarianContextProvider>
           <Navbar />
@@ -17,6 +19,7 @@ function App() {
           <Route path="/checkout" component={Checkout} />
         </VegetarianContextProvider>
         </CombinationContextProvider>
+        </NavContextProvider>
       </div>
     </BrowserRouter>
   );

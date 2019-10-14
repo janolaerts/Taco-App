@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { CombinationContext } from '../contexts/CombinationContext';
-import { Redirect } from 'react-router-dom'
 import BaseLayers from './BaseLayers';
 import Condiments from './Condiments';
 import Mixings from './Mixings';

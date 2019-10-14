@@ -185,6 +185,15 @@ form .submit{
   background: white;
   border-radius: 10px;
 }
+.base-layers .menu{
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+}
 
 /* condiments, mixings, seasonings, shells */
 .condiments, .mixings, .seasonings,.shells{
