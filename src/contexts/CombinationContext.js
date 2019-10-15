@@ -14,20 +14,17 @@ const CombinationContextProvider = (props) => {
         setCombination(combination = { baseLayer: baseLayer, condiment: condiment, mixing: mixing, seasoning: seasoning, shell: shell });
     }
     let combinationsArray = JSON.parse(localStorage.getItem('combinationsArray')) || [];
-    combinationsArray.push(combination);
+    //combinationsArray.push(combination);
 
-    /*const limitArray = () => {
-        if(combination =! {
-            baseLayer: '',
-            condiment: '',
-            mixing: '',
-            seasoning: '',
-            shell: ''
-        }){
+    const limitArray = () => {
+        if(combination.baseLayer === '' && combination.condiment === '' && combination.mixing === '' && combination.seasoning === '' && combination.shell === ''){
+            return
+        }
+        else {
             combinationsArray.push(combination);
         }
     }
-    limitArray();*/
+    limitArray();
 
     useEffect(() => {
         localStorage.setItem('combinationsArray', JSON.stringify(combinationsArray));
