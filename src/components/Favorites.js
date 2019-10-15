@@ -4,7 +4,10 @@ import { NavContext } from '../contexts/NavContext';
 const Favorites = () => {
     let { toggleNav } = useContext(NavContext);
     let [favorites, setFavorites] = useState(localStorage.getItem('combinationsArray'));
+    let array = [];
+    let favoritesArray = array.push(favorites);
     console.log(favorites);
+
     return (
         <div className="favorites" >
             <img className="menu" src={require("../img/tacomenu.png")} onClick={toggleNav} />
