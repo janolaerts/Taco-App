@@ -6,7 +6,7 @@ import OrderForm from './components/OrderForm';
 import Checkout from './components/Checkout';
 import CombinationContextProvider from './contexts/CombinationContext';
 import NavContextProvider from './contexts/NavContext';
-import Favorites from './components/Favorites';
+import History from './components/History';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
           <Navbar />
           <Route exact path="/" component={OrderForm} />
           <Route path="/checkout" component={Checkout} />
-          <Route path="/favorites" component={Favorites} />
+          <Route path="/history" component={History} />
         </VegetarianContextProvider>
         </CombinationContextProvider>
         </NavContextProvider>

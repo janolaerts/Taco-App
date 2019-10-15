@@ -11,7 +11,7 @@ const Navbar = () => {
                 <img className="menu" src={require("../img/tacomenu.png")} onClick={toggleNav}/>
                 <ul>
                     <li><a href="/">Order</a></li>
-                    <li><a href="/favorites">Favorites</a></li>
+                    <li><a href="/history">Order history</a></li>
                     <li className="vegetarian"><a onClick={toggleVegetarian}>Are you vegetarian?</a></li>
                 </ul>
             </nav>
