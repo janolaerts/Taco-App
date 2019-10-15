@@ -1,12 +1,12 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { NavContext } from '../contexts/NavContext';
 
 const Favorites = () => {
     let { toggleNav } = useContext(NavContext);
-    let [favorites, setFavorites] = useState(localStorage.getItem('combinationsArray'));
-    let array = [];
-    let favoritesArray = array.push(favorites);
-    console.log(favorites);
+    let favorites = localStorage.getItem('combinationsArray');
+    let favoritesArray = [];
+    favoritesArray.push(JSON.parse(favorites));
+    favoritesArray = favoritesArray[0];
 
     return (
         <div className="favorites" >

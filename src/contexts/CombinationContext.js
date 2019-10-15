@@ -14,7 +14,6 @@ const CombinationContextProvider = (props) => {
         setCombination(combination = { baseLayer: baseLayer, condiment: condiment, mixing: mixing, seasoning: seasoning, shell: shell });
     }
     let combinationsArray = JSON.parse(localStorage.getItem('combinationsArray')) || [];
-    //combinationsArray.push(combination);
 
     const limitArray = () => {
         if(combination.baseLayer === '' && combination.condiment === '' && combination.mixing === '' && combination.seasoning === '' && combination.shell === ''){
@@ -28,7 +27,7 @@ const CombinationContextProvider = (props) => {
 
     useEffect(() => {
         localStorage.setItem('combinationsArray', JSON.stringify(combinationsArray));
-    }, [combination]);
+    }, [combinationsArray]);
     return (
         <CombinationContext.Provider value={{combination, saveCombination}}>
             { props.children }
