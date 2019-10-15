@@ -81,18 +81,26 @@ form select option{
 }
 form .submit{
   margin-top: 1%;
-  width: 25%;
+  width: 100%;
   position: relative;
-  left: 38.5%;
-  padding: 1%;
+  padding: 2%;
   background: #0892d0;
   color: white;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
-  border-radius: 50px;
   border: none;
-  margin-bottom: 1%;
+  font-size: 130%;
+}
+.error-text{
+  font-size: 120%;
+  position: relative;
+  font-weight: bold;
+  color: white;
+  background: red;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* base layers */
@@ -104,7 +112,6 @@ form .submit{
   width: 90%;
   margin: 0% auto;
   display: flex;
-  margin-top: -4%;
   text-align: center;
 }
 .base-layers-info{
@@ -115,7 +122,8 @@ form .submit{
   height: 2.5%;
   text-align: center;
   left: 0%;
-  margin-top: 4%;
+  padding: 2% 0%;
+  font-size: 120%;
 }
 .base-layer{
   margin: 0px 10px;
@@ -195,7 +203,10 @@ form .submit{
   width: 90%;
   text-align: center;
   margin: 0 auto;
-  margin-top: 2%;
+  margin-top: 6%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .condiments-info, .mixings-info, .seasonings-info, .shells-info{
   position: absolute;
@@ -205,13 +216,14 @@ form .submit{
   height: 2.5%;
   text-align: center;
   left: 0%;
-  margin-top: -1%;
+  margin-top: -5.5%;
   font-weight: bold;
+  padding: 2% 0%;
+  font-size: 120%;
 }
-.condiment, .mixing, .seasoning, .shell{
-float: left;
-margin-top: .6%;
-}
+/*.condiment, .mixing, .seasoning, .shell{
+  float: left;
+}*/
 .condiment:hover, .mixing:hover, .seasoning:hover, .shell:hover{
   transform: scale(1.05);
 }

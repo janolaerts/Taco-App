@@ -14,7 +14,7 @@ const RecipeForm = (props) => {
     const [seasoning, setSeasoning] = useState('');
     const [shell, setShell] = useState('');
     let [tacos, setTacos] = useState('');
-    let [allSelected, setAllSelected] = useState();
+    let [allSelected, setAllSelected] = useState(true);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -25,9 +25,9 @@ const RecipeForm = (props) => {
         setShell('');
         if(baseLayer === '' || condiment === '' || mixing === '' || seasoning === '' || shell === ''){
             setAllSelected(false);
-            console.log(allSelected);
         }
         else{
+            setAllSelected(true);
             saveCombination(baseLayer, condiment, mixing, seasoning, shell);
             props.history.push('/checkout');
         }
@@ -52,9 +52,9 @@ const RecipeForm = (props) => {
             <Mixings tacos={tacos} setMixing={setMixing} />
             <Seasonings tacos={tacos} setSeasoning={setSeasoning} />
             <Shells tacos={tacos} setShell={setShell} />
+            <div className="error-text" style={{display: allSelected ? 'none' : 'block'}}>{ allSelected ? '' : 'Please select one ingredient of each section' }</div>
+            <div style={{position: 'absolute', marginTop: '0%', marginRight: '0%', zIndex: '1000'}} ><a target="_blank" href="https://icons8.com/icons/set/taco">Taco</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
             <input type="submit" className="submit" />
-            <div style={{position: 'relative', left: '-25%'}} ><a target="_blank" href="https://icons8.com/icons/set/taco">Taco</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
-            <div className="error-text">{ allSelected ? '' : 'Please select one ingredient of each section' }</div>
         </form>
     );
 }
