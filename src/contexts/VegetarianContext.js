@@ -8,6 +8,7 @@ class VegetarianContextProvider extends Component {
     }
     toggleVegetarian = () => {
         this.setState({ isVegetarian: !this.state.isVegetarian });
+        console.log(this.state.isVegetarian);
     }
     render() { 
         return (

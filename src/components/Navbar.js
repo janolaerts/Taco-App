@@ -12,7 +12,7 @@ const Navbar = () => {
                 <ul>
                     <li><a href="/">Order</a></li>
                     <li><a href="/history">Order history</a></li>
-                    <li className="vegetarian"><a onClick={toggleVegetarian}>Are you vegetarian?</a></li>
+                    <li className="vegetarian">Are you vegetarian?<label className="vegetarian-switch"><input type="checkbox" onClick={toggleVegetarian} /><span className="vegetarian-slider round"></span></label></li>
                 </ul>
             </nav>
         </div>
