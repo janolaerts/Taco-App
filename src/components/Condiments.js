@@ -12,9 +12,8 @@ const Condiments = (props) => {
                             <button onClick={(e) => {
                                 props.setCondiment(e.target.parentElement.id);
                                 setBackground({ clickedItem: e.target.parentElement.id });
-                            }} style={{backgroundColor: background.clickedItem === item.title ? '#0892d0' : 'red' }} >
+                            }} style={{backgroundColor: background.clickedItem === item.title ? '#8a8381' : '#c8c7c9' }} >
                                 { item.title }
-                                
                                 </button>
                         </div>
             }) }

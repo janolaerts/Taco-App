@@ -215,13 +215,18 @@ form .submit{
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.condiments, .seasonings{
+  background: #0892d0;
+}
+.mixings, .shells{
+  background: #c8c7c9;
+}
 .condiments-info, .mixings-info, .seasonings-info, .shells-info{
   position: absolute;
   width: 100%;
   background: rgba(255, 255, 255, .7);
-  color: red;
   text-align: center;
-  margin-top: -6vw;
+  margin-top: -6.5vw;
   font-weight: bold;
   padding: 2vw 0vw;
   font-size: 1.5vw;
@@ -231,7 +236,6 @@ form .submit{
 }
 .condiment button, .mixing button, .seasoning button, .shell button{
   padding: 1vw 0.5vw;
-  background: red;
   border: none;
   color: white;
   font-weight: bold;
@@ -239,9 +243,6 @@ form .submit{
   cursor: pointer;
   border-radius: 10px;
   font-size: 1.2vw;
-}
-.condiment button:hover, .mixing button:hover, .seasoning button:hover, .shell button:hover{
-  background: #0892d0;
 }
 
 /* checkout */
