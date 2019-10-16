@@ -1,11 +1,9 @@
 import React, { useState, useContext } from 'react'
 import uuid from 'uuid/v1'
-import { VegetarianContext } from '../contexts/VegetarianContext';
 
 const Condiments = (props) => {
     let tacos = props.tacos;
     let [background, setBackground] = useState({ clickedItem: '' });
-    let { isVegetarian } = useContext(VegetarianContext);
     return (
         <div className='condiments'>
         <div className="condiments-info" >CHOOSE ONE CONDIMENT</div>

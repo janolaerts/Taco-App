@@ -1,13 +1,11 @@
 import React, { useState, useContext } from 'react'
 import uuid from 'uuid/v1'
 import { NavContext } from '../contexts/NavContext';
-import { VegetarianContext } from '../contexts/VegetarianContext';
 
 const BaseLayers = (props) => {
     let tacos = props.tacos;
     const [background, setBackground] = useState({ clickedItem: '' });
     let { toggleNav } = useContext(NavContext);
-    let { isVegetarian } = useContext(VegetarianContext);
     return (
         <div className='base-layers'>
         <img className="menu" src={require("../img/tacomenu.png")} onClick={toggleNav} />
