@@ -53,7 +53,7 @@ const RecipeForm = (props) => {
             <Seasonings tacos={tacos} setSeasoning={setSeasoning} />
             <Shells tacos={tacos} setShell={setShell} />
             <div className="error-text" style={{display: allSelected ? 'none' : 'block'}}>{ allSelected ? '' : 'Please select one ingredient of each section' }</div>
-            <div style={{position: 'absolute', marginTop: '0%', marginRight: '0%', zIndex: '1000'}} ><a target="_blank" href="https://icons8.com/icons/set/taco">Taco</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
+            <div style={{position: 'absolute', marginTop: '0%', marginRight: '0%', zIndex: '1000', fontSize: '1.5vw'}} ><a target="_blank" href="https://icons8.com/icons/set/taco">Taco</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
             <input type="submit" className="submit" />
         </form>
     );

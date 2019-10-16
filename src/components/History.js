@@ -11,9 +11,9 @@ const Favorites = () => {
 
     return (
         <div className="history-container" >
+        <div style={{position: 'absolute', marginTop: '0%', marginRight: '0%', zIndex: '1000', fontSize: '1.5vw'}} ><a target="_blank" href="https://icons8.com/icons/set/taco">Taco</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
             <img className="menu" src={require("../img/tacomenu.png")} onClick={toggleNav} />
             <div className="history-title">YOUR ORDER HISTORY</div>
-
             <div className="history-list">
             { Array.isArray(historyArray) && historyArray.map(item => {
             return  <div className="history-item" key={uuid()}>    

@@ -7,6 +7,7 @@ const Checkout = (props) => {
     let { toggleNav } = useContext(NavContext);
     return (
         <div>
+        <div style={{position: 'absolute', marginTop: '0%', marginRight: '0%', zIndex: '1000', fontSize: '1.5vw'}} ><a target="_blank" href="https://icons8.com/icons/set/taco">Taco</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
         <img className="menu" src={require("../img/tacomenu.png")} onClick={toggleNav} />
         <div className="checkout-title">YOUR ORDER</div>
             <div className="checkout-items" >
@@ -37,7 +38,6 @@ const Checkout = (props) => {
                 </div>
                 <button className="checkout-edit-order" onClick={() => props.history.push('/')} ><img className="checkout-edit-order-img" src={require('../img/arrow.png')} />GO BACK TO THE ORDER PAGE</button>
             </div>
-            <div style={{position: 'relative'}} ><a target="_blank" href="https://icons8.com/icons/set/taco">Taco</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a></div>
         </div>
     );
 }
