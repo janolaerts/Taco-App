@@ -101,6 +101,7 @@ form .submit{
   border-radius: 10px;
   width: 50%;
   margin: 0 auto;
+  margin-top: .5vw;
   text-align: center;
 }
 
@@ -247,28 +248,30 @@ form .submit{
 
 /* checkout */
 .checkout-title{
-  margin-top: 1%;
   background: #0892d0;
   text-align: center;
-  padding: 1% 0%;
   font-weight: bold;
-  font-size: 350%;
   color: white;
+  padding: 2vw 0vw;
+  font-size: 3vw;
 }
 .checkout-items{
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1%;
+  margin-top: 1vw;
 }
 .checkout-item{
   color: white;
   font-weight: bold;
+  font-size: 2vw;
   background: red;
   width: 17%;
   height: 15%;
   border: black solid 2px;
   border-radius: 10px;
   margin: 0 auto;
+  margin-top: 2vw;
+  flex-basis: 60%;
 }
 .checkout-item-title{
   text-align: center;
@@ -280,35 +283,29 @@ form .submit{
 }
 .checkout-item-text{
   text-align: center;
-  font-size: 100%;
+  font-size: 2vw;
 }
 .checkout-edit-order{
   position: relative;
-  width: 25%;
-  margin: 10% auto;
-  padding: 1% 0%;
+  width: 100%;
+  margin: 2.5vw 0vw 0vw 0vw;
+  padding: 1.5vw 0%;
   border: none;
   background: #0892d0;
   font-weight: bold;
   color: white;
-  border-radius: 10px;
   cursor: pointer;
-  font-size: 140%;
-}
-.checkout-edit-order-img{
-  float: left;
-  margin-left: 2%;
+  font-size: 2vw;
 }
 
 /* history */
 .history-title{
-  margin-top: 2.5%;
   background: #0892d0;
   text-align: center;
-  padding: 1% 0%;
   font-weight: bold;
-  font-size: 350%;
   color: white;
+  padding: 2vw 0vw;
+  font-size: 3vw;
 }
 .history-list{
   width: 90%;
@@ -322,11 +319,24 @@ form .submit{
   width: 45%;
   font-weight: bold;
   color: white;
-  font-size: 150%;
+  font-size: 2vw;
   border-radius: 10px;
+  position: relative;
+  height: 65vw;
 }
 .history-item .history-image{
   width: 100%;
+}
+.history-item .order-again-button{
+  width: 100%;
+  position: absolute;
+  bottom: 1%;
+  padding: .5vw 0vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+  border: none;
+  background: #c8c7c9;
+  cursor: pointer;
 }
 
 /* menu */

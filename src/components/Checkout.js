@@ -36,7 +36,7 @@ const Checkout = (props) => {
                     <img className="checkout-item-image" src={require('../img/taco-cards.jpg')} alt="taco" />
                     <div className="checkout-item-text">{ combination.shell }</div>
                 </div>
-                <button className="checkout-edit-order" onClick={() => props.history.push('/')} ><img className="checkout-edit-order-img" src={require('../img/arrow.png')} />GO BACK TO THE ORDER PAGE</button>
+                <button className="checkout-edit-order" onClick={() => props.history.push('/')} >GO BACK TO THE ORDER PAGE</button>
             </div>
         </div>
     );
