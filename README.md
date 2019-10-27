@@ -1,3 +1,16 @@
+# Taco App
+Taco App is an application to mimic orders fo tacos, made in React. The goal of this application was to familiarize myself with React, Context and Hooks.
+
+## Installation
+Use npm install to install all the dependencies
+```bash
+npm install
+```
+## Usage
+On the main page you can select the base layer, condiment, mixing, seasoning and shell you want for your taco.
+After ordering the application shows you an overview of what you have ordered.
+On the history overview page, you can see an overview of the tacos you have ordered in the past.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,16 +79,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-# Taco App
-Taco App is an application to mimic orders fo tacos, made in React. The goal of this application was to familiarize myself with React, Context and Hooks.
-
-## Installation
-Use npm install to install all the dependencies
-```bash
-npm install
-```
-## Usage
-On the main page you can select the base layer, condiment, mixing, seasoning and shell you want for your taco.
-After ordering the application shows you an overview of what you have ordered.
-On the history overview page, you can see an overview of the tacos you have ordered in the past.
